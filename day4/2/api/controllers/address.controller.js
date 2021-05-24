@@ -12,7 +12,7 @@ module.exports.addressGetOne = function (req, res) {
     const studentId = req.params.studentId;
     const addressId = req.params.addressId;
     Student.findById(studentId).select("address").exec(function (err, student) {
-        const address = student.addresses.id(addressId)
-        res.status(200).json(student)
+        const address = student.addresses.id(addressId);
+        res.status(200).json(address);
     })
 }
