@@ -1,0 +1,6 @@
+<H1>{{vm.title}}</H1>
+<ul>
+    <li ng-repeat="friend in vm.friends">
+        <a ng-href="#/friend/{{friend._id}}">{{friend.firstname}}</a>
+    </li>
+</ul>

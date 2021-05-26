@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="meanGames">
+<head>
+    <title>MEAN Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div ng-view></div>
+    <h1>MEAN Games homepage.</h1>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted" text-center>
+                <a href="http://compro.miu.edu" target="_blank">
+                </a>
+            </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+    <script src="./angular-app/app.js"></script>
+    <script src="./angular-app/game-list/game-list-controller.js"></script>
+    <script src="./angular-app/game-one/game-one-controller.js"></script>
+    <script src="./angular-app/game-data-factory/game-data-factory.js"></script>
+</body>
+</html>
