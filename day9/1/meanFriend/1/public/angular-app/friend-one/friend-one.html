@@ -1,0 +1,12 @@
+<h1>Information about friend: <p>{{vm.friend.firstname}} {{vm.friend.birthdate}}</p></h1>
+
+<p>
+    Interests:  <br/>
+    Favorite Sport: {{vm.friend.interest.sport}}<br/>
+    Favorite Music: {{vm.friend.interest.music}}<br/>
+    Favorite Movie: {{vm.friend.interest.movie}}<br/>
+    <br/>
+</p>
+<form name="vm.deleteFriendForm" ng-submit="vm.deleteFriend()">
+    <button type="submit" class="btn-success">Delete Friend</button><BR />
+</form>
