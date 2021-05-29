@@ -1,0 +1,24 @@
+<h1>Information about job: <p>{{vm.job.title}}</p>
+</h1>
+
+<p>
+    Salary : {{vm.job.salary | currency}} <br />
+    Description: {{vm.job.description}}<br />
+    Experience: {{vm.job.experience}}<br />
+    Skills: {{vm.job.skills}}<br />
+    Post Date: {{vm.job.postDate}}<br/>
+    Location: {{vm.job.location.city}}
+    <br />
+</p>
+<br />
+<form name="vm.updateJobForm" ng-submit="vm.updateJob()">
+    Title: <input type="text" name="title" required ng-model="vm.editedJobTitle" style="color:black" /><BR />
+    Salary: <input type="text" name="salary" required ng-model="vm.editedJobSalary" style="color:black" /><BR />
+    Description: <input type="text" name="description" required ng-model="vm.editedJobDescription" style="color:black" /><BR />
+    Experience: <input type="text" name="experience" required ng-model="vm.editedJobExperience" style="color:black" /><BR />
+    Skills: <input type="text" name="skills" ng-model="vm.editedJobSkills"
+        style="color:black" />
+    Post Date: <input type="text" name="postDate" required ng-model="vm.editedJobPostDate"
+        style="color:black" /><BR />
+    <button type="submit" class="btn-success">Update Job</button><BR />
+</form>
