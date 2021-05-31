@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="meanGames">
+<head>
+    <title>MEAN Games</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div ng-view></div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted" text-center>
+                <a href="http://compro.miu.edu" target="_blank">
+                </a>
+            </p>
+        </div>  
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+    <script src="./angular-app/app.js"></script>
+    <script src="./angular-app/game-list/game-list-controller.js"></script>
+    <script src="./angular-app/game-one/game-one-controller.js"></script>
+    <script src="./angular-app/game-data-factory/game-data-factory.js"></script>
+    <script src="./angular-app/game-rating-directive/game-rating-directive.js"></script>
+    <script src="./angular-app/register/registerController.js"></script>
+    <script src="./angular-app/login/loginController.js"></script>
+    <script src="./angular-app/navigation-directive/navigation-directive.js"></script>
+</body>
+</html>

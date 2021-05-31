@@ -1,0 +1,20 @@
+<H1>{{vm.title}}</H1>
+All friends list:
+<ul>
+    <li ng-repeat="friend in vm.friends">
+        <a ng-href="#/friend/{{friend._id}}">{{friend.firstname}}</a>
+    </li>
+</ul>
+
+<form name="vm.friendForm" ng-submit="vm.addFriend()">
+    To add a new friend please fill in all the fields below:<BR />
+    First name: <input type="text" name="firstname" required ng-model="vm.newFriendFirstname" style="color:black" /><BR />
+    Last name: <input type="text" name="lastname" required ng-model="vm.newFriendLastname" style="color:black" /><BR />
+    Birthdate: <input type="text" name="birthdate" required ng-model="vm.newFriendBirthdate" ng-min=1900 ng-max=2020 style="color:black" /><BR />
+    <button type="submit" class="btn-success">Add Friend</button><BR />
+</form>
+
+<form name="vm.friendForm" ng-submit="vm.searchFriend()">
+    Name of a friend: <input type="text" name="friendName" ng-model="vm.friendName" style="color:black" />
+    <button type="submit" class="btn-success">Search Friend</button><BR />
+</form></br>

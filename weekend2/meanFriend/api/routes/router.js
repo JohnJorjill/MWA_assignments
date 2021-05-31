@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const controllerFriend = require("../controllers/friends.controller");
 const controllerInterests = require("../controllers/interests.controller");
-const controllerUsers=require("../controllers/users.controller");
+const controllerUsers = require("../controllers/users.controller");
 
 router.route("/friends")
       .get(controllerFriend.friendsGetAll)
@@ -21,6 +21,9 @@ router.route("/friends/:friendId/interests")
       .post(controllerInterests.interestAddOne)
       .put(controllerInterests.interestUpdate)
       .delete(controllerInterests.interestDelete);
+
+router.route("/friends/name/:friendName")
+      .get(controllerFriend.friendsGetOneByName)
 
 router.route("/users")
       .post(controllerUsers.usersRegister);

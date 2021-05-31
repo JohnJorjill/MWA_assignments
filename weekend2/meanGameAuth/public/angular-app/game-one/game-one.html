@@ -1,0 +1,25 @@
+<h1>Information about game: <p>{{vm.game.title}}
+        <game-rating stars={{vm.rating}}></game-rating>
+    </p>
+</h1>
+
+<p>
+    Price: {{vm.game.price | currency}} <br />
+    Minimum Players: {{vm.game.minPlayers}}<br />
+    Maximum Players: {{vm.game.maxPlayers}}<br />
+    Minimum Age: {{vm.game.minAge}}<br />
+    Publisher: {{vm.game.publisher.name}}
+    <br />
+</p>
+<br />
+<form name="vm.updateGameForm" ng-submit="vm.updateGame()">
+    Price: <input type="text" name="title" required ng-model="vm.editedGamePrice" value={{vm.game.price}}
+        style="color:black" /><br />
+    Minimum Number of Players: <input type="text" name="minPlayers" ng-min=1 ng-max=10 required ng-pattern=""
+        ng-model="vm.editedGameMinPlayers" style="color:black" /></br>
+    Maximum Number of Players: <input type="text" name="maxPlayers" required ng-model="vm.editedGameMaxPlayers"
+        style="color:black" /><BR />
+    Minimum Recommended Player Age: <input type="text" name="minAge" required ng-model="vm.editedGameMinAge"
+        style="color:black" /><BR />
+    <button type="submit" class="btn-success">Update Game</button><BR />
+</form>
