@@ -12,7 +12,7 @@
     <br />
 </p>
 <br />
-<form name="vm.updateGameForm" ng-submit="vm.updateGame()">
+<form name="vm.updateGameForm" ng-if="vm.isLoggedIn()" ng-submit="vm.updateGame()">
     Price: <input type="text" name="title" required ng-model="vm.editedGamePrice" value={{vm.game.price}}
         style="color:black" /><br />
     Minimum Number of Players: <input type="text" name="minPlayers" ng-min=1 ng-max=10 required ng-pattern=""

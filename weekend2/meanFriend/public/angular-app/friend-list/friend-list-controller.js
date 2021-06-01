@@ -1,11 +1,17 @@
 angular.module("meanFriends").controller("FriendsController",FriendsController)
 
-function FriendsController(FriendDataFactory){
+function FriendsController(FriendDataFactory, AuthFactory){
+    
     const vm = this;
     vm.title = "Mean Friends APP";
+
     FriendDataFactory.getAllFriends().then(function(response){
         vm.friends = response;
     });
+
+    vm.isLoggedIn = function(){
+        return AuthFactory.auth.isLoggedIn;
+    };
 
     vm.addFriend=function(){
         const newFriend={

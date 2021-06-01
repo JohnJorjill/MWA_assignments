@@ -2,24 +2,28 @@
 <html ng-app="meanFriends">
 <head>
     <title>MEAN Friends</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div ng-view></div>
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted" text-center>
-                <a href="http://compro.miu.edu" target="_blank">
-                </a>
-            </p>
-        </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
     <script src="./angular-app/app.js"></script>
     <script src="./angular-app/friend-list/friend-list-controller.js"></script>
     <script src="./angular-app/friend-data-factory/friend-data-factory.js"></script>
     <script src="./angular-app/friend-one/friend-one-controller.js"></script>
-    <script src="./angular-app/login/loginController.js"></script>
+    <script src="./angular-app/login/login-controller.js"></script>
     <script src="./angular-app/register/registerController.js"></script>
+    <script src="./angular-app/navigation-directive/navigation-directive.js"></script>
+    <script src="./angular-app/user-data-factory/user-data-factory.js"></script>
+    <script src="./angular-app/authentication/auth-factory.js"></script>
+    <script src="../node_modules/angular-jwt/dist/angular-jwt.js"></script>
+
+    <friends-navigation></friends-navigation>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
 </body>
 </html>

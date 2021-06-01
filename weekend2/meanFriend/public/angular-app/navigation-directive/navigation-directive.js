@@ -1,6 +1,6 @@
-angular.module("meanGames").directive("gamesNavigation", GamesNavigation)
+angular.module("meanFriends").directive("friendsNavigation", FriendsNavigation)
 
-function GamesNavigation(){
+function FriendsNavigation(){
     return {
         restrict:"E",
         templateUrl: "angular-app/navigation-directive/navigation-directive.html"

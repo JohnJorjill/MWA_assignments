@@ -1,12 +1,16 @@
 angular.module("meanGames").controller("GamesController",GamesController)
 
-function GamesController(GameDataFactory){
+function GamesController(GameDataFactory,AuthFactory){
     const vm = this;
     vm.title = "Mean Games APP";
-   // vm.isSubmitted=false;
     GameDataFactory.getAllGames().then(function(response){
         vm.games = response;
     });
+
+    vm.isLoggedIn = function(){
+        return AuthFactory.auth.isLoggedIn;
+    };
+
     vm.addGame=function(){
         const newGame={
             title: vm.newGameTitle,

@@ -5,8 +5,8 @@ const controllerPublishers = require("../controllers/publishers.controller");
 const controllerUsers=require("../controllers/users.controller");
 
 router.route("/games")
-      .get(controllerGame.gamesGetAll)
-      .post(controllerGame.gamesAddOne)
+      .get(controllerUsers.authenticate,controllerGame.gamesGetAll)
+      .post(controllerUsers.authenticate, controllerGame.gamesAddOne)
       
 router.route("/games/some")
       .get(controllerGame.gamesGetSome)

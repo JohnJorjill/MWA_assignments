@@ -4,7 +4,7 @@ function _getStarRating(stars){
     return new Array(stars);
 }
 
-function GameController($routeParams, GameDataFactory, $route){
+function GameController($routeParams, GameDataFactory, $route,AuthFactory){
     const vm = this;
     const gameId = $routeParams.id;
 
@@ -34,6 +34,10 @@ function GameController($routeParams, GameDataFactory, $route){
         }).catch(function(error){
             console.log(error);
         });
+    }
+
+    vm.isLoggedIn= function(){
+        return AuthFactory.auth.isLoggedIn;
     }
 
 }
