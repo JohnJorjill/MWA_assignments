@@ -5,8 +5,8 @@ const controllerInterests = require("../controllers/interests.controller");
 const controllerUsers = require("../controllers/users.controller");
 
 router.route("/friends")
-      .get(controllerUsers.authenticate,controllerFriend.friendsGetAll)
-      .post(controllerUsers.authenticate,controllerFriend.friendsAddOne)
+      .get(controllerFriend.friendsGetAll)
+      .post(controllerFriend.friendsAddOne)
 
 router.route("/friends/some")
       .get(controllerFriend.friendsGetSome)

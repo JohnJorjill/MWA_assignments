@@ -23,12 +23,3 @@ module.exports.gamesGetSome = function (req, res) {
     }
     )
 }
-
-// module.exports.publisherGetOne = function (req, res) {
-//     const gameId = req.params.gameId;
-//     const publisherId = req.params.publisherId;
-//     Game.findById(gameId).select("publisher").exec(function (err, game) {
-//         const publisher = game.publishers.id(publisherId)
-//         res.status(200).json(publisher)
-//     })
-// }

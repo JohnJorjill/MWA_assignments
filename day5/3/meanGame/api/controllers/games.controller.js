@@ -40,7 +40,7 @@ module.exports.gamesGetAll = function (req, res) {
 module.exports.gamesGetSome = function (req, res) {
     let maxCount = 100;
     let offset = 0;
-    let count = 5;
+    let count = 3;
     if (req.query && req.query.offset) {
         offset = parseInt(req.query.offset, 10);
     }
@@ -57,7 +57,6 @@ module.exports.gamesGetSome = function (req, res) {
         })
         return
     }
-    
     Game.find().skip(offset).limit(count).exec(function (err, docs) {
         if (err) {
             res.status(500).json(err)

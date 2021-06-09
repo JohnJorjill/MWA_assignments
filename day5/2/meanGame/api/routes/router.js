@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const controllerGame = require("../controllers/games.controller");
 const controllerPublishers = require("../controllers/publishers.controller");
-const controllerUsers=require("../controllers/users.controller");
 
 router.route("/games")
       .get(controllerGame.gamesGetAll)
@@ -21,11 +20,5 @@ router.route("/games/:gameId/publishers")
       .post(controllerPublishers.publisherAddOne)
       .put(controllerPublishers.publisherUpdate)
       .delete(controllerPublishers.publisherDelete);
-
-router.route("/users")
-      .post(controllerUsers.usersRegister);
-
-router.route("/auth")
-      .post(controllerUsers.usersAuthenticate);
 
 module.exports = router;
