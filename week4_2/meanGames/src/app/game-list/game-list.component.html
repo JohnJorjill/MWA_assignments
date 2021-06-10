@@ -1,0 +1,20 @@
+
+<ul>
+    <li *ngFor = "let game of games" > <a routerLink="/game/{{game._id}}">{{game.title}}</a>  </li>
+</ul>
+
+<button nbButton (click)="getPrevGames()">Previous</button><button nbButton (click)="getNextGames()">Next</button><br><br>
+
+<form #addGameForm="ngForm" (ngSubmit)="addGame(addGameForm)">
+    To add a new game please fill in all the fields below:<BR />
+    Title: <input type="text" name="title" id="title" ngModel style="color:black" /><BR />
+    Price: <input type="text" name="price" id="price" ngModel style="color:black" /><BR />
+    Year of Publication: <input type="text" name="year" id="year" ngModel style="color:black" /><BR />
+    Rating: <input type="text" name="rating" id="rating" ngModel style="color:black" /><BR />
+    Minimum Number of Players: <input type="text" name="minPlayers" ng-min=1 ng-max=10 id="minPlayers" ngModel style="color:black" />
+    Maximum Number of Players: <input type="text" name="maxPlayers" id="maxPlayers" ngModel style="color:black" /><BR />
+    Minimum Recommended Player Age: <input type="text" name="minAge" id="minAge" ngModel style="color:black" /><BR />
+    Designer name: <input type="text" name="designer" id="designer" ngModel style="color:black" /><BR />
+    <button type="submit" class="btn-success">Add Game</button><BR />
+</form>
+

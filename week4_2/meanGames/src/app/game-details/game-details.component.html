@@ -1,0 +1,10 @@
+<p>Game title: {{game.title}}</p>
+<p>Game price: {{game.price | currency}}</p>
+
+<form #updateGameForm="ngForm" (ngSubmit)="updateGame(updateGameForm)">
+    Price: <input type="text" name="price" id="price" ngModel style="color:black" /><BR />
+    Minimum Number of Players: <input type="text" name="minPlayers" id="minPlayers" ngModel ng-min=1 ng-max=10 style="color:black" /><BR />
+    Maximum Number of Players: <input type="text" name="maxPlayers" id="maxPlayers" ngModel style="color:black" /><BR />
+    Minimum Recommended Player Age: <input type="text" name="minAge" id="minAge" ngModel style="color:black" /><BR />
+    <button type="submit" class="btn-success">Update Game</button>
+</form>

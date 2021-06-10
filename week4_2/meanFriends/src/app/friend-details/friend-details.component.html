@@ -1,0 +1,7 @@
+<p>Favorite sport: {{friend.interest.sport}}</p>
+<p>Favorite music: {{friend.interest.music}}</p>
+<p>Favorite movie: {{friend.interest.movie}}</p>
+
+<form #deleteFriendForm="ngForm" (ngSubmit)="deleteFriend()">
+    <button type="submit" class="btn-success">Delete Friend</button>
+</form>

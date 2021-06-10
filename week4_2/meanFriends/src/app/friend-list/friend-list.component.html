@@ -1,0 +1,15 @@
+
+<ul>
+    <li *ngFor = "let friend of friends" > <a routerLink="/friend/{{friend._id}}">{{friend.firstname}}</a>  </li>
+</ul>
+
+<button nbButton (click)="getPrevFriends()">Previous</button><button nbButton (click)="getNextFriends()">Next</button><br><br>
+
+<form #addFriendForm="ngForm" (ngSubmit)="addFriend(addFriendForm)">
+    To add a new friend please fill in all the fields below:<BR />
+    First Name: <input type="text" name="firstname" id="firstname" ngModel style="color:black" /><BR />
+    Last Name: <input type="text" name="lastname" id="lastname" ngModel style="color:black" /><BR />
+    Year of Birth: <input type="text" name="birthdate" id="birthdate" ngModel style="color:black" /><BR />
+    <button type="submit" class="btn-success">Add Friend</button><BR />
+</form>
+
